@@ -1,4 +1,3 @@
-```markdown
 # Sistema de Control Alimentario - Backend
 
 Backend para sistema de control de desayuno y refrigerio escolar con autenticación biométrica.
