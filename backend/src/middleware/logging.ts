@@ -29,3 +29,19 @@ export const errorLogger = (error: any, req: Request, res: Response, next: NextF
   
   next(error);
 };
+
+export const responseLogger = (req: Request, res: Response, next: NextFunction) => {
+  const originalSend = res.send;
+
+  res.send = function (body?: any): Response {
+    logger.info('HTTP Response', {
+      method: req.method,
+      path: req.path,
+      status: res.statusCode,
+      body: body
+    });
+    return originalSend.call(this, body);
+  };
+
+  next();
+};
