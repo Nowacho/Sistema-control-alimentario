@@ -1,0 +1,20 @@
+# Ignorar la carpeta node_modules
+node_modules/
+
+# Ignorar los archivos de entorno
+.env
+
+# Ignorar los archivos de registro
+*.log
+
+# Ignorar los directorios de compilación de producción
+dist/
+build/
+
+# Ignorar los archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar las carpetas IDE
+.vscode/
+.idea/
