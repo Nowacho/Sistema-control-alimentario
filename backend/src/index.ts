@@ -33,7 +33,7 @@ app.get('/api/health', async (req: Request, res: Response) => {
 app.use(notFoundHandler);
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
+const PORT = parseInt(process.env.PORT || '3001', 10);
+app.listen(PORT, 'localhost', () => {
   console.log(`🚀 Servidor ejecutándose en puerto ${PORT}`);
 });
